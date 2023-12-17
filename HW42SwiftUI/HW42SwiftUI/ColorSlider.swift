@@ -15,9 +15,10 @@ struct ColorSlider: View {
         VStack {
             HStack {
                 Text("\(lround(sliderValue))").foregroundColor(.black)
-                Slider(value: $sliderValue, in: 0 ... 255, step: 1)
+                Slider(value: $sliderValue, in: 0...255, step: 1)
                     .colorMultiply(color)
                     .cornerRadius(40)
+                ValueTF(sliderValue: $sliderValue)
             }.padding(.horizontal)
         }
     }

@@ -15,9 +15,9 @@ struct ValueTF: View {
     @State var newValue = 0.0
     
     var body: some View {
-        TextField("0.0", text: textValue) {
+        TextField("0.0", text: textValue, onCommit: {
             sliderValue = newValue
-        } .bordered()
+        }) .bordered()
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Wrong value"),
                 message: Text("Please enter value from 0 to 255"))

@@ -23,15 +23,12 @@ struct ContentView: View {
             ColorView(red: savedRed, green: savedGreen, blue: savedBlue, size: CGSize(width: 350, height: 150))
             HStack {
                 ColorSlider(sliderValue: $red, color: .red)
-                ValueTF(sliderValue: $red)
             }
             HStack {
                 ColorSlider(sliderValue: $green, color: .green)
-                ValueTF(sliderValue: $green)
             }
             HStack {
                 ColorSlider(sliderValue: $blue, color: .blue)
-                ValueTF(sliderValue: $blue)
             }
             SaveButton(title: "Save", width: 300, height: 60, backgroundColor: .blue, action: {
                 savedRed = red
